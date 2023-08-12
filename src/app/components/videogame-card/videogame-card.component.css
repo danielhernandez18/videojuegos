@@ -1,0 +1,60 @@
+:host {
+    margin-bottom: 15px;
+}
+
+.card{
+    background: linear-gradient(to right, #b8c2df, #69a1cf);
+
+}
+
+.card-image-container {
+    max-height: 180px;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.card-image-container  img {
+    width: 100%;
+    height: auto;
+}
+.card-title{
+    font-size: 18px;
+ }
+
+span{
+    font-weight: 500;
+}
+
+.description{
+    overflow: auto;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.btn-add{
+    background-color: #15cc8e;
+    color: #fff
+}
+.btn-add:hover{
+    background-color: #21a97b;
+    color: #fff
+}
+
+.description::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+.description::-webkit-scrollbar:vertical {
+    width:6px;
+}
+.description::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #6ea3d0;
+}
+.description::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}

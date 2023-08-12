@@ -1,0 +1,54 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #b8c2df, #69a1cf);
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    margin: auto;
+    background-color: #c6d8e0a3;
+    border-radius: 5px;
+}
+
+.checkbox {
+    font-weight: 400;
+}
+
+.form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.form-control:focus{
+    z-index: 2;
+}
+
+label{
+    text-align: initial;
+    font-weight: 500;
+    padding-left: 8px;
+}
+
+.btn-login{
+    background-color: #15cc8e;
+    color: #fff
+}
+.btn-login:hover{
+    background-color: #21a97b;
+    color: #fff
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+}

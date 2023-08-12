@@ -1,0 +1,75 @@
+<div class="container form-addGame" [formGroup]="addGame">
+    <h2 class="mb-4"> Agregar nuevo videojuego </h2>
+
+    <div class="d-flex flex-column was-validated">
+        <!-- Titulo - Calificación -->
+        <div class="d-flex mb-3">
+            <div class="w-50 mr-2">
+                <label for="inputTitle" class="form-label">Título:</label>
+                <input type="text" id="inputTitle" class="form-control" placeholder="Ingresa el título del videojuego"
+                    required formControlName="title">
+            </div>
+
+            <div class="w-50 ml-2">
+                <label for="inputCalification" class="form-label">Calificación:</label>
+                <input type="number" id="inputCalification" class="form-control" placeholder="0" min="0" max="10"
+                    required formControlName="calification">
+            </div>
+        </div>
+
+        <!-- Descripción -->
+        <div class="mb-3">
+            <label for="textDescription" class="form-label">Descripción:</label>
+            <textarea class="form-control" placeholder="Ingrese la descripción del videojuego" required
+                id="textDescription" formControlName="description"></textarea>
+        </div>
+
+        <!-- Lanzamiento - Descargas -->
+        <div class="d-flex mb-3">
+            <div class="w-50 mr-2">
+                <label for="inputDate" class="form-label">Fecha de lanzamiento:</label>
+                <input type="date" id="inputDate" class="form-control" placeholder="Ingresa la fecha de lanzamiento"
+                    required formControlName="date">
+            </div>
+
+            <div class="w-50 ml-2">
+                <label for="inputDownloads" class="form-label">Número de descargas:</label>
+                <input type="number" id="inputDownloads" class="form-control" placeholder="0" required
+                    formControlName="downloads">
+            </div>
+        </div>
+
+        <!-- Imagen -->
+        <div class="mb-3 d-flex flex-column">
+            <label for="urlImage" class="form-label">Imagen:</label>
+            <input type="url" name="urlImage" pattern="https://.*"
+                placeholder="Ingrese la URL de la imagen del videojuego" required id="urlImage" class="form-control"
+                formControlName="image">
+        </div>
+    </div>
+
+    <!-- Próximamente -->
+    <div class="form-check mt-2">
+        <input class="form-check-input" type="checkbox" value="" id="checkComingsoon" formControlName="checkComingsoon">
+        <label class="form-check-label" for="checkComingsoon">
+            Próximamente
+        </label>
+    </div>
+
+    <p class="mb-0 text-danger" style="text-align: end;" *ngIf="addForminvalid">
+        {{ errorMessage }}
+    </p>
+
+    <div class="mt-4 d-flex justify-content-end">
+        <button class="btn btn-lg btn-add btn-block w-50" (click)="onAdd()" [disabled]="addProductMessage">Agregar</button>
+    </div>
+
+    <div class="alert alert-success addMessage d-flex align-items-center mr-2" role="alert" *ngIf="addProductMessage">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+        </svg> 
+        <p class="m-0 ml-2">
+            Producto agregado al carrito de compras
+        </p>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+.form-addGame {
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    margin: auto;
+    margin-top: 90px;
+    background-color: #fcfbfb;
+    border-radius: 5px;
+    border: 2px solid #f2f1f1;
+}
+
+label{
+    text-align: initial;
+    font-weight: 500;
+    padding-left: 8px;
+}
+
+.btn-add{
+    background-color: #15cc8e;
+    color: #fff
+}
+.btn-add:hover{
+    background-color: #21a97b;
+    color: #fff
+}
+
+.spinner-border{
+    width: 4rem;
+    height: 4rem;
+}
+
+.addMessage{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+}
+
+textarea{
+    height: 80px;
+    resize: none;
+}
+textarea::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+textarea::-webkit-scrollbar:vertical {
+    width:6px;
+}
+textarea::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #fcfbfb;
+}
+textarea::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}

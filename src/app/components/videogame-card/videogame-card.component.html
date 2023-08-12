@@ -1,0 +1,20 @@
+<div class="card" style="width: 21rem;">
+    
+    <div class="" style="padding-bottom: 0px;">
+        <h5 class="card-title p-2 m-0">Titulo: {{ videogame ? videogame.title : 'Sin nombre' }} </h5>
+    </div>
+    <div class="card-image-container">
+        <img class="card-img-top" [src]="videogame ? videogame.image : '../../../assets/images/cars/blue-car-front.png'" alt="Imagen no disponible">
+    </div>
+    <div class="card-body p-2">
+        <p><span>Fecha de lanzamiento: </span>{{ videogame?.releaseDate | date:"longDate"}} </p>
+        <p><span>Calificación: </span>{{ videogame ? videogame.rating : 'Sin rating' }} </p>
+        <div class="description">
+            <span class="m-0">Descripción:</span>
+            <p> {{ (videogame ? videogame.description : 'Sin descripción') }}  </p>
+        </div>
+        <div class="d-flex justify-content-end mb-2">
+            <button href="#" class="btn btn-add" (click)="onBuy()">Agregar al carrito</button>
+        </div>
+    </div>
+</div>
